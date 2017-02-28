@@ -8,6 +8,7 @@
 
 #import "DetailViewController.h"
 #import "Command.h"
+#import <NMSSH/NMSSH.h>
 
 @interface DetailViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *displayCommand;
@@ -32,8 +33,34 @@
 
 - (IBAction)executeCommand:(id)sender
 {
-    self.status.text = @"running";
+    self.status.text = @"connecting";
     self.executeButton.enabled = NO;
+    
+    NMSSHSession *session = [NMSSHSession connectToHost:self.command.address
+                                           withUsername:self.command.username];
+    
+    if (session.isConnected) {
+        self.status.text = @"authenticating";
+        if(![session authenticateByPassword:self.command.password]) {
+            self.status.text = @"authentication failed";
+        } else {
+            if (session.isAuthorized) {
+                self.status.text = @"execute";
+                NSError *error = nil;
+                NSString *response = [session.channel execute:self.command.command error:&error];
+                
+                if (!error) {
+                    self.status.text = @"success";
+                    self.displayCommand.text = response;
+                } else {
+                    self.status.text = @"failed";
+                    self.displayCommand.text = [error localizedDescription];
+                }
+            }
+        }
+    }
+    
+    self.executeButton.enabled = YES;
 }
 
 @end
