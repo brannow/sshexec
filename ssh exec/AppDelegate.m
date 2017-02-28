@@ -150,4 +150,11 @@
     return fetchController;
 }
 
+- (NSManagedObject*) createDataObjectWithName:(NSString*)name
+{
+    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    NSManagedObjectContext *context = [appDelegate managedObjectContext];
+    return [NSEntityDescription insertNewObjectForEntityForName:name inManagedObjectContext:context];
+}
+
 @end

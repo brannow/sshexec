@@ -20,6 +20,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     self.fetchedResultsController = [appDelegate commandFetchResultController];
     self.fetchedResultsController.delegate = self;

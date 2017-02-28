@@ -20,6 +20,7 @@
 - (void)saveContext;
 
 - (NSFetchedResultsController*) commandFetchResultController;
+- (NSManagedObject*) createDataObjectWithName:(NSString*)name;
 
 @end
 

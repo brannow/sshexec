@@ -116,31 +116,31 @@
                                 <rect key="frame" x="20" y="85" width="334" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="server address" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gUz-zZ-hbK">
                                 <rect key="frame" x="20" y="123" width="334" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wGW-2T-mau">
                                 <rect key="frame" x="20" y="161" width="334" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kGU-TH-E8c">
                                 <rect key="frame" x="20" y="199" width="334" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Command" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yy1-de-XS6">
                                 <rect key="frame" x="20" y="237" width="334" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -163,9 +163,24 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="LHH-8C-d0L">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="FRn-gn-bGA"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="xoS-X0-89D"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="FRn-gn-bGA">
+                            <connections>
+                                <action selector="cancel:" destination="j3z-xc-T9c" id="WWV-HI-a5C"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="xoS-X0-89D">
+                            <connections>
+                                <action selector="saveHumidor:" destination="j3z-xc-T9c" id="Ptw-A5-WMU"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="commandAddress" destination="gUz-zZ-hbK" id="QxW-x4-Tag"/>
+                        <outlet property="commandCommand" destination="yy1-de-XS6" id="Fkv-qo-fe8"/>
+                        <outlet property="commandName" destination="32M-mu-a5m" id="17t-g4-cN2"/>
+                        <outlet property="commandPassword" destination="kGU-TH-E8c" id="2sZ-VE-zTZ"/>
+                        <outlet property="commandUsername" destination="wGW-2T-mau" id="N5s-ZJ-tLo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KHZ-nh-TFo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
