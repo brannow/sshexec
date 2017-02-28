@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		430B0C771E659FEF00540495 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 430B0C761E659FEF00540495 /* RootViewController.m */; };
 		433991AA1E658D8700A4631E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 433991A91E658D8700A4631E /* main.m */; };
 		433991AD1E658D8700A4631E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 433991AC1E658D8700A4631E /* AppDelegate.m */; };
-		433991B01E658D8700A4631E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 433991AF1E658D8700A4631E /* ViewController.m */; };
 		433991B31E658D8700A4631E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 433991B11E658D8700A4631E /* Main.storyboard */; };
 		433991B61E658D8700A4631E /* ssh_exec.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 433991B41E658D8700A4631E /* ssh_exec.xcdatamodeld */; };
 		433991B81E658D8700A4631E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 433991B71E658D8700A4631E /* Assets.xcassets */; };
@@ -17,12 +17,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		430B0C751E659FEF00540495 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		430B0C761E659FEF00540495 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		433991A51E658D8700A4631E /* ssh exec.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ssh exec.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		433991A91E658D8700A4631E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		433991AB1E658D8700A4631E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		433991AC1E658D8700A4631E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		433991AE1E658D8700A4631E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		433991AF1E658D8700A4631E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		433991B21E658D8700A4631E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		433991B51E658D8700A4631E /* ssh_exec.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ssh_exec.xcdatamodel; sourceTree = "<group>"; };
 		433991B71E658D8700A4631E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -62,8 +62,8 @@
 			children = (
 				433991AB1E658D8700A4631E /* AppDelegate.h */,
 				433991AC1E658D8700A4631E /* AppDelegate.m */,
-				433991AE1E658D8700A4631E /* ViewController.h */,
-				433991AF1E658D8700A4631E /* ViewController.m */,
+				430B0C751E659FEF00540495 /* RootViewController.h */,
+				430B0C761E659FEF00540495 /* RootViewController.m */,
 				433991B11E658D8700A4631E /* Main.storyboard */,
 				433991B71E658D8700A4631E /* Assets.xcassets */,
 				433991B91E658D8700A4631E /* LaunchScreen.storyboard */,
@@ -154,9 +154,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				433991B01E658D8700A4631E /* ViewController.m in Sources */,
 				433991AD1E658D8700A4631E /* AppDelegate.m in Sources */,
 				433991AA1E658D8700A4631E /* main.m in Sources */,
+				430B0C771E659FEF00540495 /* RootViewController.m in Sources */,
 				433991B61E658D8700A4631E /* ssh_exec.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -314,6 +314,7 @@
 				433991C11E658D8700A4631E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

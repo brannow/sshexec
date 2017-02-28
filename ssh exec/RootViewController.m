@@ -1,18 +1,18 @@
 //
-//  ViewController.m
+//  RootViewController.m
 //  ssh exec
 //
 //  Created by Benjamin on 28.02.17.
 //  Copyright © 2017 Benjamin. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "RootViewController.h"
 
-@interface ViewController ()
+@interface RootViewController ()
 
 @end
 
-@implementation ViewController
+@implementation RootViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
