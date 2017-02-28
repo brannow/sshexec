@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class Command;
+
 @interface DetailViewController : UIViewController
+
+@property(nonatomic, strong) Command *command;
 
 @end

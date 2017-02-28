@@ -24,7 +24,12 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    self.title = @"Add Command";
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self
+                                                                          action:@selector(dismissKeyboard)];
+    
+    [self.view addGestureRecognizer:tap];
 }
 
 - (void)didReceiveMemoryWarning
@@ -51,27 +56,50 @@
 
 - (IBAction)saveHumidor:(id)sender
 {
-    AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
-    Command* command = (Command*)[appDelegate createDataObjectWithName:@"Command"];
+    NSString *name = [self.commandName.text stringByTrimmingCharactersInSet:
+                     [NSCharacterSet whitespaceCharacterSet]];
     
-    command.name = [self.commandName.text stringByTrimmingCharactersInSet:
-                    [NSCharacterSet whitespaceCharacterSet]];
+    if (name.length > 0) {
+        AppDelegate *appDelegate = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+        Command* command = (Command*)[appDelegate createDataObjectWithName:@"Command"];
+        
+        command.name = name;
+
+        command.address = [self.commandAddress.text stringByTrimmingCharactersInSet:
+                           [NSCharacterSet whitespaceCharacterSet]];
+        
+        command.username = [self.commandUsername.text stringByTrimmingCharactersInSet:
+                            [NSCharacterSet whitespaceCharacterSet]];
+        
+        command.password = [self.commandPassword.text stringByTrimmingCharactersInSet:
+                            [NSCharacterSet whitespaceCharacterSet]];
+        
+        command.command = [self.commandCommand.text stringByTrimmingCharactersInSet:
+                           [NSCharacterSet whitespaceCharacterSet]];
+        
+        [appDelegate saveContext];
+        
+        [self cancel:sender];
+    } else {
+        [self showMissingNameWarning];
+    }
+}
+
+- (void) showMissingNameWarning
+{
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Command Name"
+                                                                             message:@"Ihr neuer Command hat keinen Namen"
+                                                                      preferredStyle:UIAlertControllerStyleAlert];
     
-    command.address = [self.commandAddress.text stringByTrimmingCharactersInSet:
-                    [NSCharacterSet whitespaceCharacterSet]];
     
-    command.username = [self.commandUsername.text stringByTrimmingCharactersInSet:
-                       [NSCharacterSet whitespaceCharacterSet]];
-    
-    command.password = [self.commandPassword.text stringByTrimmingCharactersInSet:
-                        [NSCharacterSet whitespaceCharacterSet]];
-    
-    command.command = [self.commandCommand.text stringByTrimmingCharactersInSet:
-                        [NSCharacterSet whitespaceCharacterSet]];
-    
-    [appDelegate saveContext];
-    
-    [self cancel:sender];
+    UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK"
+                                                       style:UIAlertActionStyleDefault
+                                                     handler:^(UIAlertAction *action)
+                               {
+                                   [self.commandName becomeFirstResponder];
+                               }];
+    [alertController addAction:okAction];
+    [self presentViewController:alertController animated:YES completion:nil];
 }
 
 @end

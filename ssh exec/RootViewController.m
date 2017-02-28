@@ -8,7 +8,9 @@
 
 #import "RootViewController.h"
 #import "AppDelegate.h"
-#import "Command+CoreDataClass.h"
+#import "Command.h"
+#import "DetailViewController.h"
+
 
 @interface RootViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -165,7 +167,15 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    NSLog(@"%@",segue.identifier);
+    if ([segue.identifier isEqualToString:@"detailViewController"]) {
+        UITableViewCell *cell = (UITableViewCell*)sender;
+        NSIndexPath *cellIndexPath = [self.tableView indexPathForCell:cell];
+        DetailViewController *detailViewController = (DetailViewController *)segue.destinationViewController;
+        Command *command = [self.fetchedResultsController objectAtIndexPath:cellIndexPath];
+        [self.tableView deselectRowAtIndexPath:cellIndexPath animated:NO];
+        detailViewController.command = command;
+        detailViewController.title = command.name;
+    }
 }
 
 

@@ -198,31 +198,53 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FzR-8T-J1C">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FzR-8T-J1C">
                                 <rect key="frame" x="16" y="592" width="343" height="55"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="aJA-LU-gfs"/>
+                                </constraints>
                                 <state key="normal" title="Execute">
                                     <color key="titleColor" red="0.99473684210000002" green="0.98947368420000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="executeCommand:" destination="HQd-dn-7Ko" eventType="touchUpInside" id="DXK-cY-8kV"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Status" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uJ2-CV-137">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Status" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uJ2-CV-137">
                                 <rect key="frame" x="16" y="563" width="343" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Command" lineBreakMode="wordWrap" numberOfLines="8" baselineAdjustment="none" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fhO-8I-JNn">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Command" lineBreakMode="wordWrap" numberOfLines="8" baselineAdjustment="none" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fhO-8I-JNn">
                                 <rect key="frame" x="16" y="72" width="343" height="231"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="231" id="LB8-X0-eWu"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="FzR-8T-J1C" secondAttribute="bottom" constant="20" symbolic="YES" id="1Ro-p4-ci5"/>
+                            <constraint firstItem="fhO-8I-JNn" firstAttribute="trailing" secondItem="uJ2-CV-137" secondAttribute="trailing" id="5d3-eM-HDI"/>
+                            <constraint firstItem="uJ2-CV-137" firstAttribute="trailing" secondItem="FzR-8T-J1C" secondAttribute="trailing" id="I9n-fV-kxk"/>
+                            <constraint firstItem="fhO-8I-JNn" firstAttribute="trailing" secondItem="bzJ-2A-FL0" secondAttribute="trailingMargin" id="Loh-Zg-cgn"/>
+                            <constraint firstItem="FzR-8T-J1C" firstAttribute="top" secondItem="uJ2-CV-137" secondAttribute="bottom" constant="8" symbolic="YES" id="fEJ-dj-Vl6"/>
+                            <constraint firstItem="fhO-8I-JNn" firstAttribute="leading" secondItem="bzJ-2A-FL0" secondAttribute="leadingMargin" id="jUo-F1-vU9"/>
+                            <constraint firstItem="uJ2-CV-137" firstAttribute="leading" secondItem="FzR-8T-J1C" secondAttribute="leading" id="t9f-2R-L73"/>
+                            <constraint firstItem="fhO-8I-JNn" firstAttribute="leading" secondItem="uJ2-CV-137" secondAttribute="leading" id="tUd-5r-UNL"/>
+                            <constraint firstItem="fhO-8I-JNn" firstAttribute="top" secondItem="1Dz-OI-rGB" secondAttribute="bottom" constant="8" symbolic="YES" id="zbO-LF-xKm"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="displayCommand" destination="fhO-8I-JNn" id="sRQ-7X-eew"/>
+                        <outlet property="executeButton" destination="FzR-8T-J1C" id="v32-TH-Pm6"/>
+                        <outlet property="status" destination="uJ2-CV-137" id="qZP-ku-NN9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NNX-2Q-n3A" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
