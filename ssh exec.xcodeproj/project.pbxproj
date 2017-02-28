@@ -14,6 +14,9 @@
 		433991B61E658D8700A4631E /* ssh_exec.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 433991B41E658D8700A4631E /* ssh_exec.xcdatamodeld */; };
 		433991B81E658D8700A4631E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 433991B71E658D8700A4631E /* Assets.xcassets */; };
 		433991BB1E658D8700A4631E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 433991B91E658D8700A4631E /* LaunchScreen.storyboard */; };
+		435AB9F11E65AB1000F08B4E /* AddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 435AB9F01E65AB1000F08B4E /* AddViewController.m */; };
+		435AB9F41E65B04000F08B4E /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 435AB9F31E65B04000F08B4E /* DetailViewController.m */; };
+		435AB9FC1E65B4A000F08B4E /* Command+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 435AB9F81E65B0D400F08B4E /* Command+CoreDataProperties.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,14 @@
 		433991B71E658D8700A4631E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		433991BA1E658D8700A4631E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		433991BC1E658D8700A4631E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		435AB9EF1E65AB1000F08B4E /* AddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddViewController.h; sourceTree = "<group>"; };
+		435AB9F01E65AB1000F08B4E /* AddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddViewController.m; sourceTree = "<group>"; };
+		435AB9F21E65B04000F08B4E /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		435AB9F31E65B04000F08B4E /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		435AB9F51E65B0D400F08B4E /* Command.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Command.h; sourceTree = "<group>"; };
+		435AB9F61E65B0D400F08B4E /* Command.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Command.m; sourceTree = "<group>"; };
+		435AB9F71E65B0D400F08B4E /* Command+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Command+CoreDataProperties.h"; sourceTree = "<group>"; };
+		435AB9F81E65B0D400F08B4E /* Command+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Command+CoreDataProperties.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,11 +75,16 @@
 				433991AC1E658D8700A4631E /* AppDelegate.m */,
 				430B0C751E659FEF00540495 /* RootViewController.h */,
 				430B0C761E659FEF00540495 /* RootViewController.m */,
+				435AB9F21E65B04000F08B4E /* DetailViewController.h */,
+				435AB9F31E65B04000F08B4E /* DetailViewController.m */,
+				435AB9EF1E65AB1000F08B4E /* AddViewController.h */,
+				435AB9F01E65AB1000F08B4E /* AddViewController.m */,
 				433991B11E658D8700A4631E /* Main.storyboard */,
 				433991B71E658D8700A4631E /* Assets.xcassets */,
 				433991B91E658D8700A4631E /* LaunchScreen.storyboard */,
 				433991BC1E658D8700A4631E /* Info.plist */,
 				433991B41E658D8700A4631E /* ssh_exec.xcdatamodeld */,
+				435AB9FB1E65B0DA00F08B4E /* Model */,
 				433991A81E658D8700A4631E /* Supporting Files */,
 			);
 			path = "ssh exec";
@@ -80,6 +96,17 @@
 				433991A91E658D8700A4631E /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		435AB9FB1E65B0DA00F08B4E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				435AB9F51E65B0D400F08B4E /* Command.h */,
+				435AB9F61E65B0D400F08B4E /* Command.m */,
+				435AB9F71E65B0D400F08B4E /* Command+CoreDataProperties.h */,
+				435AB9F81E65B0D400F08B4E /* Command+CoreDataProperties.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,10 +181,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				435AB9F11E65AB1000F08B4E /* AddViewController.m in Sources */,
 				433991AD1E658D8700A4631E /* AppDelegate.m in Sources */,
 				433991AA1E658D8700A4631E /* main.m in Sources */,
 				430B0C771E659FEF00540495 /* RootViewController.m in Sources */,
 				433991B61E658D8700A4631E /* ssh_exec.xcdatamodeld in Sources */,
+				435AB9F41E65B04000F08B4E /* DetailViewController.m in Sources */,
+				435AB9FC1E65B4A000F08B4E /* Command+CoreDataProperties.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
