@@ -18,33 +18,8 @@
 		435AB9F41E65B04000F08B4E /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 435AB9F31E65B04000F08B4E /* DetailViewController.m */; };
 		435AB9FC1E65B4A000F08B4E /* Command+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 435AB9F81E65B0D400F08B4E /* Command+CoreDataProperties.m */; };
 		435ABAEA1E65C37700F08B4E /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 435ABAE91E65C37700F08B4E /* CFNetwork.framework */; };
-		435ABAEB1E65C38000F08B4E /* NMSSH.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 435ABAE51E65C2BA00F08B4E /* NMSSH.framework */; };
 		435ABAED1E65C39400F08B4E /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 435ABAEC1E65C39400F08B4E /* libz.tbd */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		435ABAE21E65C2BA00F08B4E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 435ABADC1E65C2BA00F08B4E /* NMSSH-iOS.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 18A0964F17D6A8C4008B76FB;
-			remoteInfo = "NMSSH Static";
-		};
-		435ABAE41E65C2BA00F08B4E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 435ABADC1E65C2BA00F08B4E /* NMSSH-iOS.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 186CC9581B69110500F674C4;
-			remoteInfo = NMSSH;
-		};
-		435ABAE61E65C32500F08B4E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 435ABADC1E65C2BA00F08B4E /* NMSSH-iOS.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 186CC9571B69110500F674C4;
-			remoteInfo = NMSSH;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		435ABA0E1E65BF0200F08B4E /* Embed Frameworks */ = {
@@ -79,7 +54,6 @@
 		435AB9F61E65B0D400F08B4E /* Command.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Command.m; sourceTree = "<group>"; };
 		435AB9F71E65B0D400F08B4E /* Command+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Command+CoreDataProperties.h"; sourceTree = "<group>"; };
 		435AB9F81E65B0D400F08B4E /* Command+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Command+CoreDataProperties.m"; sourceTree = "<group>"; };
-		435ABADC1E65C2BA00F08B4E /* NMSSH-iOS.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "NMSSH-iOS.xcodeproj"; path = "NMSSH/NMSSH-iOS.xcodeproj"; sourceTree = "<group>"; };
 		435ABAE91E65C37700F08B4E /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		435ABAEC1E65C39400F08B4E /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -90,7 +64,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				435ABAED1E65C39400F08B4E /* libz.tbd in Frameworks */,
-				435ABAEB1E65C38000F08B4E /* NMSSH.framework in Frameworks */,
 				435ABAEA1E65C37700F08B4E /* CFNetwork.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -101,7 +74,6 @@
 		4339919C1E658D8700A4631E = {
 			isa = PBXGroup;
 			children = (
-				435ABADC1E65C2BA00F08B4E /* NMSSH-iOS.xcodeproj */,
 				433991A71E658D8700A4631E /* ssh exec */,
 				433991A61E658D8700A4631E /* Products */,
 				435ABAE81E65C37700F08B4E /* Frameworks */,
@@ -157,15 +129,6 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
-		435ABADD1E65C2BA00F08B4E /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				435ABAE31E65C2BA00F08B4E /* NMSSH Static.framework */,
-				435ABAE51E65C2BA00F08B4E /* NMSSH.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		435ABAE81E65C37700F08B4E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -190,7 +153,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				435ABAE71E65C32500F08B4E /* PBXTargetDependency */,
 			);
 			name = "ssh exec";
 			productName = "ssh exec";
@@ -224,35 +186,12 @@
 			mainGroup = 4339919C1E658D8700A4631E;
 			productRefGroup = 433991A61E658D8700A4631E /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 435ABADD1E65C2BA00F08B4E /* Products */;
-					ProjectRef = 435ABADC1E65C2BA00F08B4E /* NMSSH-iOS.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				433991A41E658D8700A4631E /* ssh exec */,
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		435ABAE31E65C2BA00F08B4E /* NMSSH Static.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "NMSSH Static.framework";
-			remoteRef = 435ABAE21E65C2BA00F08B4E /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		435ABAE51E65C2BA00F08B4E /* NMSSH.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = NMSSH.framework;
-			remoteRef = 435ABAE41E65C2BA00F08B4E /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		433991A31E658D8700A4631E /* Resources */ = {
@@ -283,14 +222,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		435ABAE71E65C32500F08B4E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = NMSSH;
-			targetProxy = 435ABAE61E65C32500F08B4E /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		433991B11E658D8700A4631E /* Main.storyboard */ = {
