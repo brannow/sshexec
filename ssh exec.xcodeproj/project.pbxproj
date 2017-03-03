@@ -337,15 +337,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = A6L4DYQ22M;
 				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/NMSSH/NMSSHTests/Settings/lib",
+					"$(inherited)"
 				);
 				INFOPLIST_FILE = "ssh exec/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/NMSSH/NMSSH-iOS/Libraries/lib",
-					"$(PROJECT_DIR)/NMSSH/NMSSH-OSX/Libraries/lib",
+					"$(inherited)"
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "moe.fuyukai.ssh-exec";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -358,15 +355,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = A6L4DYQ22M;
 				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/NMSSH/NMSSHTests/Settings/lib",
+					"$(inherited)"
 				);
 				INFOPLIST_FILE = "ssh exec/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/NMSSH/NMSSH-iOS/Libraries/lib",
-					"$(PROJECT_DIR)/NMSSH/NMSSH-OSX/Libraries/lib",
+					"$(inherited)"
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "moe.fuyukai.ssh-exec";
 				PRODUCT_NAME = "$(TARGET_NAME)";
