@@ -14,6 +14,8 @@
 		433991B61E658D8700A4631E /* ssh_exec.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 433991B41E658D8700A4631E /* ssh_exec.xcdatamodeld */; };
 		433991B81E658D8700A4631E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 433991B71E658D8700A4631E /* Assets.xcassets */; };
 		433991BB1E658D8700A4631E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 433991B91E658D8700A4631E /* LaunchScreen.storyboard */; };
+		4359105E1E69B1AB007D987B /* NMSSH.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 435910581E69AEB7007D987B /* NMSSH.framework */; };
+		4359105F1E69B1CA007D987B /* NMSSH.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 435910581E69AEB7007D987B /* NMSSH.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		435AB9F11E65AB1000F08B4E /* AddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 435AB9F01E65AB1000F08B4E /* AddViewController.m */; };
 		435AB9F41E65B04000F08B4E /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 435AB9F31E65B04000F08B4E /* DetailViewController.m */; };
 		435AB9FC1E65B4A000F08B4E /* Command+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 435AB9F81E65B0D400F08B4E /* Command+CoreDataProperties.m */; };
@@ -24,10 +26,11 @@
 /* Begin PBXCopyFilesBuildPhase section */
 		435ABA0E1E65BF0200F08B4E /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 12;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				4359105F1E69B1CA007D987B /* NMSSH.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -46,6 +49,7 @@
 		433991B71E658D8700A4631E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		433991BA1E658D8700A4631E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		433991BC1E658D8700A4631E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		435910581E69AEB7007D987B /* NMSSH.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NMSSH.framework; path = Framework/NMSSH.framework; sourceTree = "<group>"; };
 		435AB9EF1E65AB1000F08B4E /* AddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddViewController.h; sourceTree = "<group>"; };
 		435AB9F01E65AB1000F08B4E /* AddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddViewController.m; sourceTree = "<group>"; };
 		435AB9F21E65B04000F08B4E /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
@@ -63,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4359105E1E69B1AB007D987B /* NMSSH.framework in Frameworks */,
 				435ABAED1E65C39400F08B4E /* libz.tbd in Frameworks */,
 				435ABAEA1E65C37700F08B4E /* CFNetwork.framework in Frameworks */,
 			);
@@ -133,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				435ABAEC1E65C39400F08B4E /* libz.tbd */,
+				435910581E69AEB7007D987B /* NMSSH.framework */,
 				435ABAE91E65C37700F08B4E /* CFNetwork.framework */,
 			);
 			name = Frameworks;
@@ -337,13 +343,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = A6L4DYQ22M;
 				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)"
+					"$(inherited)",
+					"$(PROJECT_DIR)/Framework",
 				);
 				INFOPLIST_FILE = "ssh exec/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)"
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = "moe.fuyukai.ssh-exec";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -355,13 +360,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = A6L4DYQ22M;
 				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)"
+					"$(inherited)",
+					"$(PROJECT_DIR)/Framework",
 				);
 				INFOPLIST_FILE = "ssh exec/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)"
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = "moe.fuyukai.ssh-exec";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
